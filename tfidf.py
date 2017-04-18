@@ -15,6 +15,7 @@ def idf(word, bloblist):
 def tfidf(word, blob, bloblist):
     return tf(word, blob) * idf(word, bloblist)
 
+
 document1 = tb("""Python is a 2000 made-for-TV horror movie directed by Richard
 Clabaugh. The film features several cult favorite actors, including William
 Zabka of The Karate Kid fame, Wil Wheaton, Casper Van Dien, Jenny McCarthy,
@@ -49,4 +50,4 @@ for i, blob in enumerate(bloblist):
         print "word: {}, TF-IDF: {}".format(word, round(score, 5))
 
 
-    
+print sorted_words
